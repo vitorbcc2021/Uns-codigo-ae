@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!-- Tudo o que não está escrito dentro do style ou do
+       script é html e só pode ser comentado com esses símbolos,
+       que podem ser utilizados para comentar em uma única linha
+       ou em múltiplas linhas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa em javascript</title>
+    <style> /* tudo o que fica escrito dentro do style
+               é CSS e apenas pode ser comentado com barra
+               e asterisco (como se estivessemos escrevendo
+               um comentário de multiplas linhas) */
+        body {
+            background-color: rgb(82, 82, 92);
+            color: white;
+            font: normal 20pt arial;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Este é o meu primeiro programa em Javascript.</p>
+    <p>-Elaborado pelo aluno: Vitor Allace</p>
+    <script> // o script é a parte de Javascript e pode receber comentários em uma única linha
+
+             /* ou em multiplas linhas
+                como neste exemplo */
+
+        window.alert("Seja bem-vindo ao meu primeiro programa em Javascript") //irá aparecer uma caixa de diálogo para que o usuario confirme
+        //window.confirm("Deseja visualizar a página a seguir?")              uma caixa de dialogo com dois botaoes para confirmar e para cancelar
+        var nome = window.prompt("Por favor, digite seu nome para prosseguir:") //irá perguntar o nome do usuário e armazenar na variável nome
+        window.alert("Seja bem vindo senhor(a) " + nome + "!") //o + em JS tem a função de soma e concatenação, nesta linha foi utilizado para concatenação
+        /* 
+        (numero + numero) para adição
+        (string + string) para concatenação
+        o prompt normalmente receberá o que foi digitado como string
+        */
+    </script>
+</body>
+</html>
