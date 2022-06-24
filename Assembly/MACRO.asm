@@ -15,6 +15,8 @@
 		li $v0, 1
 		la $a0, ($t0)
 		syscall
+		
+		jr $ra
 .end_macro
 ###########################################
 .macro scanOpcao()
@@ -63,29 +65,21 @@ opcoes:
 adicao:
 	scanInteger()
 	add $t0, $t1, $t2
-
 	printResultado()
-	jr $ra
 
 subtracao:
 	scanInteger()
 	sub $t0, $t1, $t2
-
 	printResultado()
-	jr $ra
 
 multiplicacao:
 	scanInteger()
 	mul $t0, $t1, $t2
-
 	printResultado()
-	jr $ra
 
 divisao:
 	scanInteger()
 	div $t0, $t1, $t2
-	
 	printResultado()
-	jr $ra
 
 sair: exit()
