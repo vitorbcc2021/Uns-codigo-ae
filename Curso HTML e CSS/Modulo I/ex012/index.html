@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente!</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor:<br></p>
+    <video src="media/meuvideo.mp4" width="600" controls poster="media/thumbnail/thumbnail.png"></video>
+    <!--Os navegadores em sua maioria, aceitam apenas os formatos: MP4 M4V e WEBM !!!-->
+    <br><br>
+    <!--Assim como os áudios, os videos também podem ser colocados de outra maneira!!-->
+    <video controls width="600" poster="media/thumbnail/thumbnail.png">
+        <source src="media/meuvideo.mp4" type="video/mp4">
+        <source src="media/meuvideo.m4v" type="video/mp4">
+        <source src="media/meuvideo.webm" type="video/webm">
+        <source src="media/meuvideo.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos!</p>
+    </video>
+
+    <h1>Inserindo vídeos do YouTube</h1> <!--Desta maneira, o vídeo não fica hospedado no seu servidor consumindo sua banda! O que torna o site mais barato para seu cliente! Mas postar o vídeo no YouTube há um problema.... O vídeo fica público para QUALQUER PESSOA assistir... Caso seu cliente queira um site para um serviço em que o acesso aos vídeos apenas é liberado após o usuário pagar um plano de assinatura, você terá grandes problemas pois além do YouTube permitir que qualquer um copie o link do vídeo, o usuario ainda pode incorporar aquele vídeo no site dele! E também há o problema da reprodução automática do YouTube, que, após reproduzir o vídeo, pode acabar reproduzindo o vídeo de algum concorrente do seu cliente, o que faz com que ele perca lucros!
+        De acordo com o Gustavo Guanabara, é melhor utilizar o vímeo, ele mesmo utiliza o vímeo para criar sites para os clientes dele!
+        Mas vale ressaltar que o vímeo tem um grande problema.... Se a internet de seu usuário não for das melhores, então ele pode ter um 
+    grande problema com vídeo dando umas travadas!-->
+    <iframe width="600" height="340" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- estas linhas eu peguei apenas indo no YouTube -> clicando em compartilhar -> clicando em incorporar -> clicando em copiar -> colando ele no VSCode............ Após isso, alterei o width e o height para ajustar a propoção dos demais vídeos do meu site!-->
+</body>
+</html>
