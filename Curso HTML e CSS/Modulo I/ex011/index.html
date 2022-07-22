@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente ou diminua o tamanho do seu navegador!</p>
+
+    <picture>
+        <source media="(max-width: 550px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 750px)" srcset="imagens/foto-pm.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture> <!--A ordem dos sources importa! Sempre deve ser colocado
+                   do menor para o maior, do contrário não funciona!-->
+
+    <h1>Reproduzindo Audio</h1>
+    <p>Vamos aprender a reproduzir áudio em HTML5.</p>
+    <audio src="audios/happy-mistake.mp3" controls autoplay></audio><br>
+    <!--Geralmente a grande maioria dos navegadores suportamos áudios:
+    .mp3 .wav e .ogg
+    Outros formatos são arriscados de nem todos os navegadores rodarem-->
+
+    <!--Também posso colocar audios assim:-->
+    <audio preload="metadata" controls autoplay loop> <!--Não é muito legal utilizar o preload="auto" para seu site, pois seu site só irá terminar de carregar após carregar todo o audio... e neste caso, nosso áudio pesa incriveis 32mb!!-->
+        <!--O comando Loop faz com que o áudio recomece após terminar de tocar!!-->
+        <source src="audios/guanacast-33.mp3" type="audio/mpeg">
+        <source src="audios/guanacast-33.wav" type="audio/wav">
+        <source src="audios/guanacast-33.ogg" type="audio/ogg">
+        <!--O seu navegador irá tentar reproduzir algum dos 3 audios de cima para baixo.... se ele não conseguir, ele irá mostrar este parágrafo-->
+        <p>Infelizmente o seu navegador não é compatível com nenhum dos áudios...<br>Mas você pode baixar o audio clicando <a href="audios/guanacast-33.mp3">aqui</a>!</p>
+
+    </audio>
+</body>
+</html>
