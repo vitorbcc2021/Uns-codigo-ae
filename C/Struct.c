@@ -3,6 +3,7 @@
 
 struct aluno {  //cria a estrutura aluno
 	char *nome; int idade; bool possuiCarro; //cria o ponteiro char nome e o valor inteiro idade
+	//Obs: Strings apenas funcionam se foram um ponteiro do tipo char!
 } a1, a2;   //cria as variáveis da estrutura, a1 e a2
 
 void main(){
