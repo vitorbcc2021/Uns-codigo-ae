@@ -1,0 +1,23 @@
+.data
+	msgResultado: .asciiz "Dobro: "
+.text
+	li $v0, 5  # Recebe um valor digitado pelo usuario e armazena em $v0
+	syscall
+	move $t0, $v0 # Move de $v0 para $t0
+	
+	li $v0, 4 # Prepara o processador para imprimir uma string
+	la $a0, msgResultado # Imprime a string
+	syscall
+	
+	jal Dobro # Vai para a funcao Dobro e depois que ler o "jr $ra" ele retorna para esta linha
+	
+	li $v0, 1 # Prepara imprimir um inteiro
+	la $a0, ($t0) # Imprime o $t0
+	syscall
+	
+	li $v0, 10 # Para o programa (MUITO IMPORTANTE: do contrário seu programa se tornará um looping infinito
+	syscall
+	
+	Dobro:
+		mul $t0, $t0, 2 # Multiplica o que  está em $t0 por 2 e armazena em $t0
+		jr $ra # Volta para a linha do jal Dobro e continua lendo
