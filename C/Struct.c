@@ -20,6 +20,6 @@ void main(){
         printf("%s tem %d anos de idade e possui carro!", a2.nome, a2.idade);  //imprime o nome de a2 e a idade
     }
     else{
-        printf("%s tem %d anos de idade e nao possui carro!");
+        printf("%s tem %d anos de idade e nao possui carro!", a2.nome, a2.idade);
     }
 }
